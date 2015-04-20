@@ -450,11 +450,11 @@ xml`<plugin name="feedSomeKeys" version="1.9.3"
       urls = RegExp(urls);
 
     // FIXME 同じオブジェクトがダブって返るかも(あるいはそれで良い？)
-    let result = [];
+    let results = [];
     for (let [, m] in Iterator(targetModes || [modes.NORMAL]))
-      result = result.concat(mappings._user[m].filter(match));
+      results = results.concat(mappings._user[m].filter(match));
 
-    return result;
+    return results;
   }
 
   function unmap (condition) {
